@@ -24,4 +24,10 @@ public class HelloController {
     public String sayHelloWithPath(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz";
     }
+
+     // Use Case 4: POST Request with JSON Body
+     @PostMapping("/post")
+     public String sayHelloWithPost(@RequestBody UserDTO user) {
+         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+     }
 }
