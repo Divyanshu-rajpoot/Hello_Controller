@@ -19,4 +19,9 @@ public class HelloController {
           return "Hello " + name + " from BridgeLabz";
       }
   
+      // Use Case 3: GET Request with Path Variable
+    @GetMapping("/param/{name}")
+    public String sayHelloWithPath(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
